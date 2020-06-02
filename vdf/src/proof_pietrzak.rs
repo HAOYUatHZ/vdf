@@ -154,7 +154,7 @@ where
 
 fn create_proof_of_time_pietrzak<T>(
     challenge: &[u8],
-    iterations: Iterations,
+    iterations: Iterations,  // TODO: 感觉像是论文里的 T
     int_size_bits: u16,
 ) -> Vec<u8>
 where
