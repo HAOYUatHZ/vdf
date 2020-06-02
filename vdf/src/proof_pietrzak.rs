@@ -265,8 +265,10 @@ where
     V: ClassGroup,
     for<'a, 'b> &'a V: std::ops::Mul<&'b V, Output = V>,
     for<'a, 'b> &'a V::BigNum: std::ops::Mul<&'b V::BigNum, Output = V::BigNum>,
-{
+{   
+    // TODO: seems classgroup?
     let identity = x.identity();
+    // TODO: again?
     let i = approximate_i(iterations);
     let mut mus = vec![];
     let mut rs: Vec<V::BigNum> = vec![];
