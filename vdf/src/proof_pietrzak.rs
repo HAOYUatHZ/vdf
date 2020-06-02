@@ -279,6 +279,7 @@ where
 
     let mut ts = vec![];
 
+    // TODO: the real t
     let final_t = calculate_final_t(iterations, delta);
 
     let mut round_index = 0;
