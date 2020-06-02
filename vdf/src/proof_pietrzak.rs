@@ -256,7 +256,7 @@ pub fn generate_proof<T, U, V>(
     iterations: Iterations,
     delta: usize,
     powers: &T,
-    generate_r_value: &U,
+    generate_r_value: &U, // TODO: seems like a function
     int_size_bits: usize,
 ) -> Vec<V>
 where
