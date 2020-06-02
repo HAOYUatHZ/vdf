@@ -164,7 +164,7 @@ where
     for<'a, 'b> &'a T::BigNum: std::ops::Mul<&'b T::BigNum, Output = T::BigNum>,
 {
     let discriminant = super::create_discriminant::create_discriminant(&challenge, int_size_bits);
-    // TODO: classgroup, it should be N in the paper
+    // TODO: classgroup, it should be N in the paper? no... I think it should be x
     let x = T::from_ab_discriminant(2.into(), 1.into(), discriminant);
     let delta = 8;
     // TODO:
@@ -243,6 +243,14 @@ fn calculate_final_t(t: Iterations, delta: usize) -> u64 {
     ts[ts.len() - delta]
 }
 
+
+// TODO:
+// x,
+// iterations,
+// delta,
+// &powers,
+// &generate_r_value,
+// usize::from(int_size_bits),
 pub fn generate_proof<T, U, V>(
     x: V,
     iterations: Iterations,
