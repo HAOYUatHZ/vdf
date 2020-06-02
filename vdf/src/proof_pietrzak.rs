@@ -243,7 +243,7 @@ fn calculate_final_t(t: Iterations, delta: usize) -> u64 {
     ts[ts.len() - delta]
 }
 
-
+// I never heard that someone can read and understand codes without jumping to reference...
 // TODO:
 // x,
 // iterations,
