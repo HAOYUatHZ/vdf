@@ -289,7 +289,7 @@ where
         let half_t = curr_t >> 1;
         ts.push(half_t);
         assert!(round_index < 63);
-        // TODO: should be an entry point
+        // TODO: should be a good starting point
         let denominator: u64 = 1 << (round_index + 1);
 
         mus.push(if round_index < i {
