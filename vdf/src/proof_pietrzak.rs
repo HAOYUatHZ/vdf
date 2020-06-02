@@ -255,7 +255,7 @@ pub fn generate_proof<T, U, V>(
     x: V,
     iterations: Iterations,
     delta: usize,
-    powers: &T,
+    powers: &T, // TODO: a lot of ClassGroup?
     generate_r_value: &U, // TODO: seems like a function
     int_size_bits: usize,
 ) -> Vec<V>
