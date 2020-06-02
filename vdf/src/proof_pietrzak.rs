@@ -253,7 +253,7 @@ fn calculate_final_t(t: Iterations, delta: usize) -> u64 {
 // usize::from(int_size_bits),
 pub fn generate_proof<T, U, V>(
     x: V,
-    iterations: Iterations,
+    iterations: Iterations, // TODO: all the t_s? t-related?
     delta: usize,
     powers: &T, // TODO: a lot of ClassGroup?
     generate_r_value: &U, // TODO: seems like a function
