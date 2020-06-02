@@ -244,7 +244,7 @@ fn calculate_final_t(t: Iterations, delta: usize) -> u64 {
     ts[ts.len() - delta]
 }
 
-// I never heard that someone can read and understand codes without jumping to reference...
+// I never heard that someone can read and understand codes without jumping to references...
 // TODO:
 // x,
 // iterations,
@@ -286,6 +286,7 @@ where
     let mut round_index = 0;
     while curr_t != final_t {
         assert_eq!(curr_t & 1, 0);
+        // TODO: smaller and smaller
         let half_t = curr_t >> 1;
         ts.push(half_t);
         assert!(round_index < 63);
