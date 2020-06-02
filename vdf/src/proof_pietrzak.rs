@@ -164,9 +164,10 @@ where
     for<'a, 'b> &'a T::BigNum: std::ops::Mul<&'b T::BigNum, Output = T::BigNum>,
 {
     let discriminant = super::create_discriminant::create_discriminant(&challenge, int_size_bits);
+    // TODO: classgroup, it should be N in the paper
     let x = T::from_ab_discriminant(2.into(), 1.into(), discriminant);
-
     let delta = 8;
+    // TODO:
     let powers_to_calculate = cache_indices_for_count(iterations);
     let powers = iterate_squarings(x.clone(), powers_to_calculate.iter().cloned());
     let proof: Vec<T> = generate_proof(
