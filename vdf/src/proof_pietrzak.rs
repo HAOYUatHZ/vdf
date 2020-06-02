@@ -291,6 +291,8 @@ where
         ts.push(half_t);
         assert!(round_index < 63);
         // TODO: should be a good starting point
+        // TODO: round_index should be i?
+        // TODO: denominator should be 2^i?
         let denominator: u64 = 1 << (round_index + 1);
 
         mus.push(if round_index < i {
