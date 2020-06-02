@@ -297,6 +297,7 @@ where
 
         mus.push(if round_index < i {
             let mut mu = identity.clone();
+            // TODO: huh? why 2? and why numerator&denominator?
             for numerator in (1..denominator).step_by(2) {
                 let num_bits = 62 - denominator.leading_zeros() as usize;
                 let mut r_prod: V::BigNum = One::one();
