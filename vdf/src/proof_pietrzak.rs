@@ -165,6 +165,7 @@ where
 {
     let discriminant = super::create_discriminant::create_discriminant(&challenge, int_size_bits);
     // TODO: classgroup, it should be N in the paper? no... I think it should be x
+    // so what is N? I think it can be ignored?
     let x = T::from_ab_discriminant(2.into(), 1.into(), discriminant);
     // TODO: time unit...
     let delta = 8;
@@ -222,6 +223,7 @@ where
         proof,
         iterations,
         8,
+        // TODO: wtf is this?
         &generate_r_value,
         length_in_bits.into(),
     )
