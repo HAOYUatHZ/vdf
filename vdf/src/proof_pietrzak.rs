@@ -260,7 +260,7 @@ pub fn generate_proof<T, U, V>(
     delta: usize,
     powers: &T, // TODO: a lot of ClassGroup?
     generate_r_value: &U, // TODO: seems like a function
-    int_size_bits: usize,
+    int_size_bits: usize, // TODO: should be fixed
 ) -> Vec<V>
 where
     T: for<'a> Index<&'a u64, Output = V>,
@@ -364,7 +364,7 @@ pub fn verify_proof<T, U, V>(
     t: Iterations,
     delta: usize,
     generate_r_value: &U,
-    int_size_bits: usize,
+    int_size_bits: usize, // TODO: should be fixed
 ) -> Result<(), ()>
 where
     T: IntoIterator<Item = V>,
@@ -382,6 +382,7 @@ where
             curr_t & 1 == 0,
             "Cannot have an odd number of iterations remaining"
         );
+        // TODO: it's a function
         let r = generate_r_value(x_initial, y_initial, &mu, int_size_bits);
         x.pow(r.clone());
         x *= &mu;
